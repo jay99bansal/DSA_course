@@ -37,3 +37,35 @@ int main() {
     }
     return 0;
 }
+
+
+/*
+Problem Statement/Link: (CW) 
+https://www.codechef.com/practice/course/logical-problems/DIFF800/problems/PRB01
+
+Input:
+5
+
+23
+
+13
+
+20
+
+1000
+
+99991
+
+Output:
+yes
+
+yes
+
+no
+
+no
+
+yes
+
+By Jay Bhansal
+*/
