@@ -58,6 +58,15 @@
                     "message": 5
                 }
             }
+        },
+        {
+            "label": "compile and run java file",
+            "type": "shell",
+            "command": "java ${file} < in.txt > out.txt",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }
