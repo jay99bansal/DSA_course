@@ -5,6 +5,6 @@ public class Demo {
         Scanner s = new Scanner(System.in);
         int x = s.nextInt();
         s.close();
-        System.out.println("hello " + x);
+        System.out.println("from java: " + x);
     }
 }
