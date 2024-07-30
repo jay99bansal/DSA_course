@@ -2,9 +2,9 @@
 /*
 Problem Statement/Link: (HW/CW)
 
-Input:
+Sample Input:
 
-Output:
+Expected Output:
 
 By Jay Bhansal
 */
@@ -13,9 +13,9 @@ By Jay Bhansal
 '''
 Problem Statement/Link: (HW/CW)
 
-Input:
+Sample Input:
 
-Output:
+Expected Output:
 
 By Jay Bhansal
 
