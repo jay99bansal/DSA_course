@@ -56,3 +56,31 @@ int main() {
     }
     return 0;
 }
+
+//C++ 
+/*
+Problem Statement/Link: (HW) https://www.spoj.com/problems/PFACT/
+
+PFACT - Prime Factors
+
+Input
+There is no input.
+
+Output
+10^5 - 1 lines containing prime factors of numbers, one line for each number in the following format:
+
+<number>: <all the prime factors>
+
+Sample Input:
+
+Expected Output:
+2: 2
+3: 3
+4: 2
+5: 5
+6: 2 3
+...
+100000: 2 5
+
+By Jay Bhansal
+*/
