@@ -1,0 +1,38 @@
+//C++ 
+/*
+Problem Statement/Link: (HW/CW)
+
+Sample Input:
+
+Expected Output:
+
+By Jay Bhansal
+*/
+
+#Python
+'''
+Problem Statement/Link: (HW/CW)
+
+Sample Input:
+
+Expected Output:
+
+By Jay Bhansal
+
+'''
+
+Build: C++ files
+g++ -std=c++20 <filename>.cpp
+clang++ -std=c++20 <filename>.cpp
+ 
+Build and Run: C++ files
+Bash: g++-14 -std=c++20 <filename>.cpp && ./a.out < in.txt > out.txt
+Power Shell: g++ -std=c++20 <filename>.cpp && Get-Content in.txt | ./a > out.txt
+ 
+Compile and Run: Java files
+Bash: java <filename>.java < in.txt > out.txt
+Power Shell: Get-Content in.txt | java <filename>.java > out.txt
+ 
+Interpret: Python files
+Bash: python <filename>.py < in.txt > out.txt
+Power Shell: Get-Content in.txt | python <filename>.py > out.txt

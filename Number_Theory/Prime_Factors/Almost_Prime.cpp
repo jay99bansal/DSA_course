@@ -1,29 +1,21 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<vector>
 using namespace std;
-#define endl '\n'
-#define FOR(i,a,b) for(int i=(a); i<(b); i++)
-#define FORk(i,a,b,k) for(int i=(a); i<(b); i+=k)
-#define RFOR(i,a,b) for(int i=(a); i>=(b); i--)
-#define RFORk(i,a,b,k) for(int i=(a); i>=(b); i-=k)
-#define pb push_back
-typedef vector<int> vi;
-typedef vector<string> vs;
-typedef long long int ll;
-typedef unsigned long long int  ull;
-typedef vector<ll> vll;
-typedef vector<ull> vull;
 
-const int N = 3000;
+const int N = 1000;
 // Stores smallest prime factor
 int sp[N+1];
 
 void sieve() {
     sp[0] = 0;
     sp[1] = 1;
-    FOR(i,1,N+1) sp[i] = i;
+    //FOR(i,1,N+1) sp[i] = i;
+    for(int i=2; i<N+1; i++)
+        sp[i] = i;
     for(int i=2; i*i<N+1; i++)
         if(sp[i] == i)
-            FORk(j, i*i, N+1, i)
+            //FORk(j, i*i, N+1, i)
+            for(int j = i*i; j<N+1; j+=i)
                 if(sp[j] == j)
                     sp[j] = i;
 }
@@ -32,7 +24,8 @@ void solve() {
     int n;
     cin >> n;
     int lp1, lp2, cn, ans=0; // last prime factors, current number, answer
-    FOR(i,2,n+1) {
+    //FOR(i,2,n+1) {
+    for(int i = 2; i<n+1; i++) {
         cn = i;
         lp1 = lp2 = 1;
         while(cn != 1) {
@@ -50,9 +43,7 @@ void solve() {
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
+
     int t = 1;
     sieve();
     // cin >> t;
@@ -61,3 +52,30 @@ int main() {
     }
     return 0;
 }
+
+
+//C++ 
+/*
+Problem Statement/Link: (HW) https://codeforces.com/problemset/problem/26/A
+
+Input
+The first line of the input contains two integers n (2 ≤ n ≤ 1000) and k (0 ≤ k ≤ 1000).
+
+Output
+Output YES if at least k prime numbers from 2 to n inclusively can be expressed as it was described above. Otherwise output NO.
+
+Sample Input1:
+27 2
+
+Expected Output1:
+YES
+
+Sample Input2:
+45 7
+
+Expected Output2:
+NO
+
+By Jay Bhansal
+*/
+

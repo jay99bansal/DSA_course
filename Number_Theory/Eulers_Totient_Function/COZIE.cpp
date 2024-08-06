@@ -64,3 +64,53 @@ int main() {
     }
     return 0;
 }
+
+/*
+Problem Statement/Link: (CW) https://www.codechef.com/problems/COZIE
+
+Golu and Sweetness
+
+ 
+
+Golu and his friend are busy preparing dishes for the winners of this contest. There are N dishes in the menu.
+Golu assigns a sweetness factor to each dish. His friend is curious about this sweetness factor and decides to ask him Q queries about that.
+
+In each query, he asks Golu to count the number of numbers in range [l,r] whose sweetness factor is a prime number.
+
+Sweetness Factor of a number A is defined as the number of positive integers B, satisfying the following 2 conditions:
+     1 <= B <= A and
+     A * B = lcm(A,B)
+
+ 
+Input
+
+First line consists of 2 integers, N and Q.
+The next line contains N integers each representing a dish.
+Then Q lines follow each containing 2 integers, l and r.
+
+ 
+Output
+
+For each Query, output the number of numbers having sweetness factor as a prime number in a new line.
+
+ 
+Constraints
+1 <= N,Q <= 100000
+All the N numbers are positive integers between 0 and 1000000000
+All the queries and the array indices are 1-based.
+
+ 
+Example
+
+Input:
+3 2
+3 2 1
+1 2
+2 3
+Output:
+1
+0
+
+
+By Jay Bhansal
+*/
