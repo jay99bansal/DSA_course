@@ -49,7 +49,7 @@ int main() {
 
 //C++ 
 /*
-Problem Statement/Link: (HW)https://leetcode.com/problems/count-good-numbers/
+Problem Statement/Link: (HW) https://leetcode.com/problems/count-good-numbers/
 
 Example 1:
 Input: n = 1
