@@ -53,6 +53,26 @@ pii dia_nodes() {
     return mp(p1.first, p2.first);
 }
 
+bool dfs_path(int s, int d, vi &dp, vi &md) {
+    vis[s] = true;
+    if(s == d) {
+        dp.pb(d);
+        return true;
+    }
+    bool idp = false;
+    for(auto e: a[s]){
+        if(!vis[e.first]) {
+            if(dfs_path(e.first, d, dp, md)) {
+                dp.pb(s);
+                idp = true;
+            }
+            else
+                md[s] = max(md[s], e.second+md[e.first]);
+        }
+    }
+    return idp;
+}
+
 void solve() {
     cin >> n >> k;    
     FOR(i, 0, n-1) {
@@ -61,7 +81,22 @@ void solve() {
         a[v][u] = d;
     }
     pii dn = dia_nodes();
-    cout << dn.first << " " << dn.second;
+    // cout << dn.first << " " << dn.second << endl;
+    FOR(i, 0, n+1) vis[i] = false;
+    vi dp, md(n+1, 0);
+    dfs_path(dn.first, dn.second, dp, md);
+    // for(auto i: dp) cout << i << " " << md[i] << endl;
+    int ds = dp.size(), mmd = *max_element(md.begin(), md.end());
+    vi left(ds, 0), right(ds, 0);
+    FOR(i, 1, ds)
+        left[i] = max(md[dp[i]], left[i-1]+a[dp[i]][dp[i-1]]);
+    RFOR(i, ds-2, 0)
+        right[i] = max(md[dp[i]], right[i+1]+a[dp[i]][dp[i+1]]);
+    int r = min(k, ds), ans = INT_MAX;
+    FOR(i, 0, ds-r+1)
+        ans = min(ans, max(mmd, max(left[i], right[i+r-1])));
+    cout << ans;
+
 }
 
 int main() {
